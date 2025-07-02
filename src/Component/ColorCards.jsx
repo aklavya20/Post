@@ -1,60 +1,62 @@
 import React, { useState } from "react";
 
 const ColorCards = () => {
-  const color = [
+  const [color, setColor] = useState(null);
+  const ColorBox = [
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
     {
       initialcolor: "bg-black",
-      clickcolor: "bg-white",
+      clickedcolor: "bg-white",
     },
   ];
-  const [colors, setColors] = useState(color[0].initialcolor);
   return (
-    <>
-      {color.map((card, index) => (
-        <div key={index} className="mt-1 ml-3">
+    <div className="flex flex-row">
+      {ColorBox.map((CB, index) => (
+        <div key={index} className="mt-3 ml-3">
           <div
-            className={`border rounded-lg ${colors} border-black w-20 h-20`}
-            onClick={() => setColors((prev) => card.clickcolor)}
+            className={`border rounded-lg ${
+              color === index ? CB.clickedcolor : CB.initialcolor
+            } w-20 h-20 `}
+            onClick={() => setColor(index)}
           ></div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
