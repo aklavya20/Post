@@ -1,6 +1,7 @@
 import { useState } from "react";
+import ColorChild from "./ColorChild";
 
-const ColorBox = () => {
+const ColorParent = () => {
   const [color, setColor] = useState(null);
   const ColorBox = [
     {
@@ -44,20 +45,17 @@ const ColorBox = () => {
       clickedcolor: "bg-purple-600",
     },
   ];
+
   return (
-    <div className="flex flex-row">
-      {ColorBox.map((cb, index) => (
-        <div key={index} className="mt-3 ml-3">
-          <div
-            className={`border rounded-lg ${
-              color === index ? cb.clickedcolor : cb.initialcolor
-            } w-20 h-20 `}
-            onClick={() => setColor(index)}
-          ></div>
-        </div>
-      ))}
+    <div>
+      Color Parent
+      <ColorChild
+        ColorBox={ColorBox}
+        DefaultColor={color}
+        SetColor={setColor}
+      />
     </div>
   );
 };
 
-export default ColorBox;
+export default ColorParent;

@@ -3,7 +3,7 @@ import { Outlet } from "react-router";
 import Footer from "./Footer";
 import ColorCards from "./ColorCards";
 import ColorBox from "./ColorBox";
-import Test1 from "./Test1";
+import ColorParent from "./ColorParent";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
       <Footer />
       <ColorCards />
       <ColorBox />
-      <Test1 />
+      <ColorParent />
     </div>
   );
 };
