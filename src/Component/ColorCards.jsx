@@ -2,55 +2,56 @@ import React, { useState } from "react";
 
 const ColorCards = () => {
   const [color, setColor] = useState(null);
-  const ColorBox = [
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-    {
-      initialcolor: "bg-black",
-      clickedcolor: "bg-white",
-    },
-  ];
+  const colorArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // const ColorBox = [
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  //   {
+  //     initialcolor: "bg-black",
+  //     clickedcolor: "bg-white",
+  //   },
+  // ];
   return (
     <div className="flex flex-row">
-      {ColorBox.map((CB, index) => (
+      {colorArray.map((_, index) => (
         <div key={index} className="mt-3 ml-3">
           <div
             className={`border rounded-lg ${
-              color === index ? CB.clickedcolor : CB.initialcolor
+              color === index ? "bg-black" : "bg-white"
             } w-20 h-20 `}
             onClick={() => setColor(index)}
           ></div>
