@@ -19,5 +19,5 @@ const ColorCards = () => {
     </div>
   );
 };
-
+ 
 export default ColorCards;
