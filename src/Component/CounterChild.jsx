@@ -9,8 +9,13 @@ const CounterChild = ({ Value, SetValue }) => {
 
   return (
     <div>
-      <button onClick={Increment}> Increment </button>
-      <button onClick={Decrement}> Decrement </button>
+      <button className="border rounded-lg px-2 py-1 ml-4" onClick={Increment}>
+        Increment
+      </button>
+
+      <button className="border rounded-lg px-2 py-1 ml-4" onClick={Decrement}>
+        Decrement
+      </button>
       <br />
     </div>
   );

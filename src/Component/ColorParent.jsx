@@ -48,7 +48,6 @@ const ColorParent = () => {
 
   return (
     <div>
-      Color Parent
       <ColorChild
         ColorBox={ColorBox}
         DefaultColor={color}
