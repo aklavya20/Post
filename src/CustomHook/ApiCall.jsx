@@ -1,4 +1,3 @@
-import React from "react";
 import useFetch from "./useFetch";
 
 const ApiCall = () => {
@@ -37,7 +36,8 @@ const ApiCall = () => {
       bgcolor: "bg-purple-600",
     },
   ];
-
+  let combined = { ...arr, ...colorBox };
+  console.log(combined);
   return (
     <div className="space-y-2 m-6">
       {arr &&
