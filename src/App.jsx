@@ -6,6 +6,8 @@ import ColorParent from "./Component/ColorParent";
 
 import Card from "./Post/Card";
 import UseRef from "./Component/UseRef";
+import UseRefPractice from "./Practice/UseRefPractice";
+import ParentFile from "./ContextPractice/ParentFile";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       <ColorBox />
       <ColorParent />
       <CounterParent /> */}
-      <UseRef/>
+      <UseRef />
+      <UseRefPractice />
+      <ParentFile />
     </>
   );
 }
